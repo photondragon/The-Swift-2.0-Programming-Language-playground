@@ -17,7 +17,7 @@ var currentLoginAttempt = 0
 var x = 0.0, y = 2, z = 1.0
 
 // 类型声明 :空格
-var welcomeMessage: String
+var welcomeMessage:String
 welcomeMessage = "Hello"
 var red, green, blue: Double
 
@@ -59,7 +59,8 @@ float is Float
 
 //: 类型安全和类型推断 编译阶段发现类型错误
 let anotherPi = 3 + 0.14159
-
+//let intVal = 3, doubleVal = 0.14159
+//let intdouble = intVal+doubleVal
 //: 数值型字面量
 let decimalInteger = 17
 let binaryInteger = 0b10001       // 二进制的17
@@ -89,6 +90,8 @@ let twoThousandAndOne = twoThousand + UInt16(one)
 
 let integerPi = Int(anotherPi)
 
+//var a:UInt32 = 100,b:UInt32=200
+//var c = b-a
 //:类型别名
 typealias AudioSample = UInt16
 var maxAmplitudeFound = AudioSample.min
@@ -151,8 +154,10 @@ if let actualNumber = Int(possibleNumber) {
     print("\'\(possibleNumber)' has an integer value \(actualNumber)")
 }
 
-var a1:Int?, b1:Int?
-if let a = a1, b = b1 {} // if中可以写入多个可选绑定
+var a1:Int?, b1:Int?=1
+if let a = a1, b = b1 { // if中可以写入多个可选绑定，是与的关系，两个都不为nil条件成立
+	print("hello")
+}
 
 //:隐式解析可选类型
 let possibleString: String? = "An optional string."
